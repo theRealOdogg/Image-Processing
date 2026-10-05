@@ -17,7 +17,13 @@
 
 package frc.robot;
 
-import static edu.wpi.first.units.Units.*;
+import static edu.wpi.first.units.Units.Centimeters;
+import static edu.wpi.first.units.Units.Degrees;
+import static edu.wpi.first.units.Units.Feet;
+import static edu.wpi.first.units.Units.Inches;
+import static edu.wpi.first.units.Units.Kilograms;
+import static edu.wpi.first.units.Units.Meters;
+import static edu.wpi.first.units.Units.Pounds;
 
 import com.pathplanner.lib.config.ModuleConfig;
 import com.pathplanner.lib.config.PIDConstants;
@@ -172,7 +178,7 @@ public final class Constants {
   /** List of Robot CAN Busses ********************************************* */
   public static final class CANBuses {
     public static final String RIO = "rio";
-    public static final String DRIVE = "DriveTrain";
+    public static final String DRIVE = "Canivore";
 
     public static final String[] ALL = {RIO, DRIVE};
   }
@@ -555,14 +561,16 @@ public final class Constants {
     // Camera Configuration Records
     // (ONLY USED FOR PHOTONVISION -- Limelight: configure in web UI instead)
     // Example Cameras are mounted in the back corners, 18" up from the floor, facing sideways
+    // Measurements: 11.970" to back of robot (-Y), 2.045" right of back (+X), 14.211" up (+Z), 45
+    // degrees upward (-X)
     public static final CameraConfig[] ALL = {
       new CameraConfig(
-          "Photon_BW7",
+          "GoldenShower",
           new Transform3d(
-              Inches.of(-13.0),
-              Inches.of(13.0),
-              Inches.of(12.0),
-              new Rotation3d(0.0, 0.0, Math.PI / 2)),
+              Inches.of(2.045),
+              Inches.of(-11.970),
+              Inches.of(14.211),
+              new Rotation3d(0.0, -Math.PI / 4, -Math.PI / 2)),
           1.0,
           new SimCameraProperties() {
             {

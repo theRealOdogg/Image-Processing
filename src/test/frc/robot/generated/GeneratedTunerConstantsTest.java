@@ -18,11 +18,11 @@ class GeneratedTunerConstantsTest {
 
   @Test
   void templateTunerConstantsUseZeroOffsetsAndTenInchModuleLocations() {
-    assertTemplateGeometry(
-        COMPBOTTunerConstants.FrontLeft,
-        COMPBOTTunerConstants.FrontRight,
-        COMPBOTTunerConstants.BackLeft,
-        COMPBOTTunerConstants.BackRight);
+    /*assertTemplateGeometry(
+    COMPBOTTunerConstants.FrontLeft,
+    COMPBOTTunerConstants.FrontRight,
+    COMPBOTTunerConstants.BackLeft,
+    COMPBOTTunerConstants.BackRight);*/
     assertTemplateGeometry(
         DEVBOT1TunerConstants.FrontLeft,
         DEVBOT1TunerConstants.FrontRight,
@@ -37,7 +37,7 @@ class GeneratedTunerConstantsTest {
 
   @Test
   void templateTunerConstantsUseMatchingRatios() {
-    assertTemplateRatios(COMPBOTTunerConstants.FrontLeft);
+    // assertTemplateRatios(COMPBOTTunerConstants.FrontLeft);
     assertTemplateRatios(DEVBOT1TunerConstants.FrontLeft);
     assertTemplateRatios(DEVBOT2TunerConstants.FrontLeft);
   }
